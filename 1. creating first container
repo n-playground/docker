@@ -1,18 +1,38 @@
 ## A
-1. pull the OS image
-<code>docker pull ubuntu:latest</code>
+- pull an image
+docker pull ubuntu:latest
 
-2. list all installed containers
-<code>docker container ls -all</code>
-<code>docker container ls</code> for only running containers
+docker run --interactive --tty ubuntu bash
+docker container exec -it nginx-webserver bash
 
-3. install webserver
-<code>docker run --detach --publish 80:80 --name webserver nginx</code>
+- list all installed containers
+docker container ls
 
-4. stop running container
-<code>docker container stop <i>containers_name</i></code>
+- install webserver 
+docker run --detach --publish [port]:80 --name webserver nginx
+docker run --detach --publish 80:80 --name webserver nginx
+docker container run -d -p 8080:80 --name nginx nginx
+docker container run -d -p 8081:80 --name apache httpd
 
-## B
+- stop running container
+docker container stop containers_name
+
+- remove container
+docker container 
+
+- list installed images
+docker images
+
+- remove installed images
+docker image rm images_name:with_tag_if_failed
+
+- installing mysql
+docker container run -d -p 3306:3306 --name mysql mysql
+docker container run -d -p 3306:3306 --name mysql --env MYSQL_ROOT_PASSWORD=123456 mysql
+
+- install and bind mount nginx
+docker container run -d -p 8080:80 -v //c/dev/nginx:/usr/share/nginx/html --name nginx nginx
 
 ### source
 - https://docs.docker.com/docker-for-windows/
+- traversy
