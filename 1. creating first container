@@ -1,0 +1,18 @@
+## A
+1. pull the OS image
+<code>docker pull ubuntu:latest</code>
+
+2. list all installed containers
+<code>docker container ls -all</code>
+<code>docker container ls</code> for only running containers
+
+3. install webserver
+<code>docker run --detach --publish 80:80 --name webserver nginx</code>
+
+4. stop running container
+<code>docker container stop <i>containers_name</i></code>
+
+## B
+
+### source
+- https://docs.docker.com/docker-for-windows/
