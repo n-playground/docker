@@ -33,6 +33,19 @@ docker container run -d -p 3306:3306 --name mysql --env MYSQL_ROOT_PASSWORD=1234
 - install and bind mount nginx
 docker container run -d -p 8080:80 -v //c/dev/nginx:/usr/share/nginx/html --name nginx nginx
 
+- build image
+  > create file named `Dockerfile`
+    <code>
+    FROM nginx:latest
+    WORKDIR /usr/share/nginx/html
+    COPY . .
+    </code>
+
+  > docker image build -t ur-name/image-name .
+  > TESTING: docker container run -d -p 8082:80 norictech/nginx-dckr
+  > open http://localhost:8082
+  > viola
+
 ### source
 - https://docs.docker.com/docker-for-windows/
 - traversy
