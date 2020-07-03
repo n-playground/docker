@@ -2,6 +2,7 @@
 `docker pull ubuntu:latest`
 
 `docker run --interactive --tty ubuntu bash`
+
 `docker container exec -it nginx-webserver bash`
 
 ### list all installed containers
@@ -9,8 +10,11 @@
 
 ### install webserver 
 `docker run --detach --publish [port]:80 --name webserver nginx`
+
 `docker run --detach --publish 80:80 --name webserver nginx`
+
 `docker container run -d -p 8080:80 --name nginx nginx`
+
 `docker container run -d -p 8081:80 --name apache httpd`
 
 ### stop running container
@@ -27,6 +31,7 @@
 
 ### installing mysql
 `docker container run -d -p 3306:3306 --name mysql mysql`
+
 `docker container run -d -p 3306:3306 --name mysql --env MYSQL_ROOT_PASSWORD=123456 mysql`
 
 ### install and bind mount nginx
