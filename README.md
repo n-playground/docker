@@ -33,15 +33,15 @@
 `docker container run -d -p 8080:80 -v //c/dev/nginx:/usr/share/nginx/html --name nginx nginx`
 
 ### build image
-  > create file named `Dockerfile`
+  - create file named `Dockerfile`
     ```FROM nginx:latest
     WORKDIR /usr/share/nginx/html
     COPY . .```
 
-  > docker image build -t ur-name/image-name .
-  > TESTING: docker container run -d -p 8082:80 norictech/nginx-dckr
-  > open http://localhost:8082
-  > viola
+  - docker image build -t ur-name/image-name .
+  - TESTING: docker container run -d -p 8082:80 norictech/nginx-dckr
+  - open http://localhost:8082
+  - viola
 
 ### source
 - https://docs.docker.com/docker-for-windows/
