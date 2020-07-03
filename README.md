@@ -34,9 +34,9 @@
 
 ### build image
   > create file named `Dockerfile`
-    `FROM nginx:latest
+    ```FROM nginx:latest
     WORKDIR /usr/share/nginx/html
-    COPY . .`
+    COPY . .```
 
   > docker image build -t ur-name/image-name .
   > TESTING: docker container run -d -p 8082:80 norictech/nginx-dckr
