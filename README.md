@@ -46,9 +46,13 @@
   ```
 
 - `docker image build -t ur-name/image-name .`
-- TESTING: docker container run -d -p 8082:80 norictech/nginx-dckr
+- TESTING: `docker container run -d -p 8082:80 norictech/nginx-dckr`
 - open http://localhost:8082
 - viola
+
+### Push image to [Docker Hub](https://hub.docker.com/)
+- `docker push norictech/nginx-dckr`
+- `docker login`
 
 ### References
 - https://docs.docker.com/docker-for-windows/
