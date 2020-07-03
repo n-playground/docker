@@ -1,42 +1,44 @@
-### pull an image
+#### pull an image
 <code>docker pull ubuntu:latest</code>
 
-docker run --interactive --tty ubuntu bash
-docker container exec -it nginx-webserver bash
+<code>docker run --interactive --tty ubuntu bash</code>
+<code>docker container exec -it nginx-webserver bash</code>
 
-- list all installed containers
-docker container ls
+#### list all installed containers
+<code>docker container ls</code>
 
-- install webserver 
-docker run --detach --publish [port]:80 --name webserver nginx
-docker run --detach --publish 80:80 --name webserver nginx
-docker container run -d -p 8080:80 --name nginx nginx
-docker container run -d -p 8081:80 --name apache httpd
+#### install webserver 
+<code>docker run --detach --publish [port]:80 --name webserver nginx</code>
+<code>docker run --detach --publish 80:80 --name webserver nginx</code>
+<code>docker container run -d -p 8080:80 --name nginx nginx</code>
+<code>docker container run -d -p 8081:80 --name apache httpd</code>
 
-- stop running container
-docker container stop containers_name
+#### stop running container
+<code>docker container stop containers_name</code>
 
-- remove container
-docker container 
+#### remove container
+<code>docker container </code>
 
-- list installed images
-docker images
+#### list installed images
+<code>docker images</code>
 
-- remove installed images
-docker image rm images_name:with_tag_if_failed
+#### remove installed images
+<code>docker image rm images_name:with_tag_if_failed</code>
 
-- installing mysql
-docker container run -d -p 3306:3306 --name mysql mysql
-docker container run -d -p 3306:3306 --name mysql --env MYSQL_ROOT_PASSWORD=123456 mysql
+#### installing mysql
+<code>docker container run -d -p 3306:3306 --name mysql mysql</code>
+<code>docker container run -d -p 3306:3306 --name mysql --env MYSQL_ROOT_PASSWORD=123456 mysql</code>
 
-- install and bind mount nginx
-docker container run -d -p 8080:80 -v //c/dev/nginx:/usr/share/nginx/html --name nginx nginx
+#### install and bind mount nginx
+<code>docker container run -d -p 8080:80 -v //c/dev/nginx:/usr/share/nginx/html --name nginx nginx</code>
 
-- build image
+#### build image
   > create file named `Dockerfile`
     <code>
     FROM nginx:latest
+    
     WORKDIR /usr/share/nginx/html
+
     COPY . .
     </code>
 
